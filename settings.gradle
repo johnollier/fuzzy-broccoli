@@ -1,0 +1,7 @@
+pluginManagement {
+    repositories {
+        maven {
+            url 'http://nexus.sp-mgmt.dev.ctp.local:8081/repository/gradle-plugins/'
+        }
+    }
+}

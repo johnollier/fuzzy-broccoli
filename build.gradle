@@ -1,25 +1,17 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
-    }
+plugins {
+    id 'uk.gov.landregistry.spring-boot-project-gradle-plugin' version '0.68'
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
 bootJar {
-    baseName = 'gs-rest-service'
+    baseName = 'hello-jo'
     version =  '0.1.0'
 }
 
 repositories {
-    mavenCentral()
+    maven {
+        url "http://nexus.sp-mgmt.dev.ctp.local:8081/repository/"
+    }
 }
 
 sourceCompatibility = 1.8
